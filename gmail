@@ -1,0 +1,16 @@
+color status green default
+# color status cyan default
+
+  set sendmail  = "/usr/bin/msmtp -a gmail"
+  set mbox      = "+Gmail/all_mail"
+unset record
+  set postponed     = "+Gmail/drafts"
+  set query_command = "mail-query '%s' ~/Mail/Gmail/INBOX"
+
+# macro index ,c "<change-folder>+Vanderbilt/INBOX<return>" "change accounts"
+# macro index D "<save-message>+Gmail/trash<enter>" "move message to the trash"
+macro index S "<save-message>+Gmail/spam<enter>"  "mark message as spam"
+
+source ~/.mutt/mygmail
+
+# vim: ft=muttrc

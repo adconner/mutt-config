@@ -1,0 +1,12 @@
+#!/bin/bash
+read -r pid < ~/.offlineimap/pid
+
+if ps $pid &>/dev/null; then
+  echo "offlineimap ($pid): another instance running." >&2
+  kill $pid
+  sleep 10
+  kill -9 $pid
+  sleep 10
+fi
+
+offlineimap -u basic &
