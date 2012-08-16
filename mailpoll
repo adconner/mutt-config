@@ -1,5 +1,8 @@
 #!/bin/bash
 read -r pid < ~/.offlineimap/pid
+pids=$(ps -e | grep offlineimap | awk 'BEGIN {ORS=" "} {if ($1!='$pid') print $1}')
+
+kill -9 $pids 2>/dev/null
 
 if ps $pid &>/dev/null; then
   echo "offlineimap ($pid): another instance running." >&2

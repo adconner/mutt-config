@@ -1,11 +1,11 @@
 #!/bin/bash
-read -r pid < ~/.offlineimap/pid
+pids=$(ps -e | grep offlineimap | awk 'BEGIN {ORS=" "} {print $1}')
 
-if ps $pid &>/dev/null; then
-  echo "offlineimap ($pid): another instance running." >&2
-  kill $pid
+if [ "$pids" ]; then
+  echo "killing offlineimap instances ($pids)" 
+  kill $pids
   sleep 10
-  kill -9 $pid
+  kill -9 $pids
   sleep 10
 fi
 
