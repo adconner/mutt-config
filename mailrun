@@ -1,0 +1,9 @@
+#!/bin/bash
+read -r pid < ~/.offlineimap/pid
+
+if ps $pid &>/dev/null; then
+  echo "Signalling offlineimap ($pid) to sync with server"
+  kill -SIGUSR1 $pid
+else
+  offlineimap -o -u ttyui
+fi
