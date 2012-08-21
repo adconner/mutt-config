@@ -1,8 +1,8 @@
 application/octet-stream ; echo %s "can be anything..."                    ; copiousoutput
 text/html                ; /usr/bin/elinks -dump %s ; nametemplate=%s.html ; copiousoutput
-application/pdf          ; /usr/bin/mupdf %s                               ; copiousoutput
-image/*                  ; /usr/bin/sxiv %s                                ; copiousoutput
-audio/*                  ; /usr/bin/mplayer %s                             ; copiousoutput
-video/*                  ; /usr/bin/mplayer %s                             ; copiousoutput
-application/msword       ; /usr/bin/abiword %s                             ; copiousoutput
+application/pdf          ; /usr/bin/mupdf %s &                             ; copiousoutput
+image/*                  ; /usr/bin/sxiv %s &                              ; copiousoutput
+audio/*                  ; /usr/bin/mplayer %s &                           ; copiousoutput
+video/*                  ; /usr/bin/mplayer %s &                           ; copiousoutput
+application/msword       ; /usr/bin/abiword %s &                           ; copiousoutput
 *                        ; /usr/bin/vendor_perl/mimeopen %s                ; copiousoutput
