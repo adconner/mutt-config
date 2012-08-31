@@ -8,7 +8,7 @@
   set mailcap_path        = ~/.mutt/mailcap                       # entrys for filetypes
   set signature           = ~/.mutt/sig                           # my signature file
   set tmpdir              = /tmp                                  # where to keep temp files
-  set editor              = "vim +:silent+?^$"                    # use vim and skip to last blank line
+  set editor              = "vim '+:silent! /^$' +:noh"           # use vim and skip to 1st blank line
   set ispell              = "aspell -e -c"                        # use aspell as ispell
   # set print_command       = "enscript -p - | psselect -r | lp"    # print email in reverse page order
 
