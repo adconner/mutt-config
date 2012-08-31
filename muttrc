@@ -69,6 +69,9 @@ hdr_order from: to: cc: date: subject:                            # and in this 
 # list of folders to notify of new mail
 mailboxes +Gmail/INBOX # +Vanderbilt/INBOX
 
+# TODO: send imap sync command when mailbox updates
+# folder-hook * ~/.mutt/mailrun
+
 source $alias_file                                                # required for functionality
 source ~/.mutt/colors
 source ~/.mutt/gmail
