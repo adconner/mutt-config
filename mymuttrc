@@ -1,0 +1,7 @@
+# who am i?
+set realname = "Austin Conner"
+
+# alternate "me"s
+alternates aconner.vu@gmail.com austin.d.conner@vanderbilt.edu
+
+# vim: ft=muttrc nowrap
